@@ -7,7 +7,7 @@
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
   },
-  "homepage": "https://webdsandberg.com/blockchain",
+  "homepage": "https://webdsandberg.com/blockchain/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
