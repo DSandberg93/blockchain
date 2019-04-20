@@ -1,0 +1,30 @@
+.header-style {
+  text-align: left;
+  font-size: 2rem;
+}
+
+.label-style {
+  /* padding-top: 15px;
+  padding-bottom: 15px; */
+  padding-left: 15px;
+  width: 120px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.content-style {
+  /* margin-top: 10px; */
+  margin: 0;
+  padding: 0;
+  text-indent: 10px;
+  text-align: left;
+}
+
+.row-style {
+  margin: 0;
+  padding: 15px 0;
+}
+
+.row-style:nth-child(even) {
+  background: rgba(235, 235, 235, 0.6);
+}

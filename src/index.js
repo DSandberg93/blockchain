@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
+// import 'material-kit/assets/css/material-kit.css';
+import './assets/css/material-kit.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
