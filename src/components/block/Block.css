@@ -28,3 +28,18 @@
 .row-style:nth-child(even) {
   background: rgba(235, 235, 235, 0.6);
 }
+
+.button-style {
+  float: right;
+  margin: 10px auto;
+}
+
+.data-icon {
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.card-style {
+  margin-top: 50px;
+  padding: auto 15px;
+}

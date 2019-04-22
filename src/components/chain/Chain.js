@@ -39,13 +39,14 @@ class Chain extends Component {
   }
 
   onMine = (event) => {
-    let newBlock = createBlock(this.state.data, this.state.blockChain[this.state.blockChain.length-1].hash, this.state.blockChain.length);
-    newBlock['blockName'] = 'Block ' + this.state.blockChain.length;
-    let newBlockChain = this.state.blockChain;
-    newBlockChain.push(newBlock);
-    console.log(newBlockChain);
-    this.setState({blockChain: newBlockChain});
-    this.setState({data: ''});
+    if (event.type === 'click' || (event.type === 'keydown' && event.key === 'Enter')) {
+      let newBlock = createBlock(this.state.data, this.state.blockChain[this.state.blockChain.length-1].hash, this.state.blockChain.length);
+      newBlock['blockName'] = 'Block ' + this.state.blockChain.length;
+      let newBlockChain = this.state.blockChain;
+      newBlockChain.push(newBlock);
+      this.setState({blockChain: newBlockChain});
+      this.setState({data: ''});
+    }
   }
 
   onDataInputChange = (event) => {
@@ -69,7 +70,7 @@ class Chain extends Component {
             />
           )
         }
-        <Block data={''} blockName={'Block ' + this.state.blockChain.length} mine={this.onMine} dataInputChange={this.onDataInputChange}/>
+        <Block data={this.state.data} blockName={'Block ' + this.state.blockChain.length} mine={this.onMine} dataInputChange={this.onDataInputChange}/>
       </div>
     );
   };
